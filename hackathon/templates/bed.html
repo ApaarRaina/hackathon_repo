@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Beds</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/ayush.png" type="ayush/png">
+
+
+</head>
+<body>
+    <nav>
+        <img src="/static/ayush.png" height="40px" class="logo" alt="Ayush logo"/>
+        <div class="logoname">Ministry Of Ayush</div>
+        <div class="n">
+            <a class="nv" href="{{ url_for('index') }}">Home</a>
+            <a class="nv" href="{{ url_for('login') }}">Log in</a>
+        </div>
+    </nav>
+
+
+    <!-- Flash messages section -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <div class="alert">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+    <h1>Available Beds</h1>
+    <div class="bed_option">
+    {% for bed in beds_data %}
+    <div class="bed" data-bed-id="{{ bed.wardID }}">
+        <h2 class="bed-type">{{ bed.wardID }}</h2>
+        <p class="bed-details">24X7 Nurse Assistance | Food Availability</p>
+        <p class="bed-rooms">Rooms Available: {{ bed.bedsAvailable }}</p>
+        {% if bed.bedsAvailable>0 %}
+            <form action="{{ url_for('book_bed') }}" method="post">
+                <input type="hidden" name="ward_id" value="{{bed.wardID}}"/>
+               <label for="patient_id_{{ bed.wardID }}">Patient ID:</label>
+               <input type="text" id="patient_id_{{ bed.wardID }}" name="patient_id" required/>
+               <input type="submit" value="Book Now" class="book-button"/>
+            </form>
+        {%else%}
+           <form action="{{ url_for('handlewaitlist') }}" method="post">
+               <input type="hidden" name="ward_id" value="{{bed.wardID}}"/>
+               <label for="patient_id_{{ bed.wardID }}">Patient ID:</label>
+               <input type="text" id="patient_id{{ bed.wardID }}" name="patient_id" required/>
+               <input type="submit" value="Add To waitlist" class="book-button"/>
+           </form>
+        {%endif%}
+    </div>
+    {% endfor %}
+</div>
+
+
+    <footer class="footer">
+        <div class="sec">
+            <img src="/static/ayush.png" height="30px" class="logo" alt="Ayush logo"/>
+            Ministry of Ayush
+        </div>
+        <div class="sec">
+            Helpful links
+            <a href="courses.html" class="flink">Services</a>
+            <a href="FAQs.html" class="flink">FAQs</a>
+            <a href="TnC.html" class="flink">Terms and Conditions</a>
+        </div>
+        <div class="sec">
+            Connect with us
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> **********</li>
+                <li><i class="fa-solid fa-envelope"></i> abc@gmail.com</li>
+                <li><i class="fa-brands fa-instagram"></i> ******</li>
+                <li><i class="fa-brands fa-facebook"></i> ********</li>
+                <li><i class="fa-brands fa-linkedin"></i> *********</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System </title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/ayush.png" type="ayush/png">
+</head>
+<body>
+    <nav>
+        <img src="/static/ayush.png" height="40px" class="logo" alt="Ayush logo"/>
+        <div class="logoname">Ministry Of Ayush</div>
+        <div class="n">
+            <a class="nv" href="http://127.0.0.1:5000//">Home</a>
+            <a class="nv" href="http://127.0.0.1:5000//login">Log in</a>
+        </div>
+    </nav>
+    <form action='/Signup' method='POST'>
+    <div class="signup_box">
+        <heading>Create account</heading>
+        <div class="ent">
+            <label>Name: </label>
+            <input type="text" name="name" />
+        </div>
+        <div class="ent">
+            <label>Phone number: </label>
+            <input type="text" name="phone" />
+        </div>
+        <div class="ent">
+            <label>Email ID: </label>
+            <input type="text" name="email" />
+        </div>
+        <div class="ent">
+            <label for="password">Enter Password: </label>
+            <input type="password" name="password" placeholder="******" maxlength="12" required/>
+        </div>
+        <div class="ent">
+                <label for="hospital">Select Hospital: </label>
+                <select id="hospital" name="hospital" required>
+                    <option value="">--Select--</option>
+                    <option value="Hospital1">Hospital 1</option>
+                    <option value="Hospital2">Hospital 2</option>
+                </select>
+        </div>
+        <p>Joining as ?</p>
+        <div class="joinAs">
+            <label>
+                <input type="radio" name="role" value="Admin"> Admin
+            </label>
+            <label>
+                <input type="radio" name="role" value="User"> User
+            </label>
+        </div>
+        <div class="ent">
+            <input type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
+
+    
+    <footer class="footer">
+        <div class="sec">
+            <img src="/static/ayush.png" height="30px" class="logo" alt="Ayush logo"/>
+            Ministry of Ayush
+        </div>
+        <div class="sec">
+            Helpful links
+            <a href="courses.html" class="flink">Services</a>
+            <a href="FAQs.html" class="flink">FAQs</a>
+            <a href="TnC.html" class="flink">Terms and Conditions</a>
+        </div>
+        <div class="sec">
+            Connect with us 
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> **********</li>
+                <li><i class="fa-solid fa-envelope"></i> abc@gmail.com</li>
+                <li><i class="fa-brands fa-instagram"></i> ******</li>
+                <li><i class="fa-brands fa-facebook"></i> ********</li>
+                <li><i class="fa-brands fa-linkedin"></i> *********</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/static/login.js"></script>
+</body>
+</html>

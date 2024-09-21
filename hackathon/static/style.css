@@ -1,0 +1,637 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #caf0f8;
+}
+
+body {
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0077b6;
+}
+
+.logo{
+    background-color: #f0f8ff;
+}
+
+.logoname {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: white;
+    background-color: #0077b6;
+}
+
+.n {
+    background-color: #0077b6;
+    display: flex;
+    gap: 2rem;
+}
+
+.nv {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: #0077b6;
+    transition: background-color 0.3s ease;
+}
+
+.nv:hover {
+    background-color: #023e8a;
+}
+
+.photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 2%;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    background-color: #0077b6;
+}
+
+.searchbox {
+    width: 700px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.search i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #0077b6;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.box {
+    width: 30%;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #00b4d8;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    background-color: #00b4d8;
+}
+
+.box a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0077b6;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #0077b6;
+    color: white;
+}
+
+.sec {
+    width: 30%;
+    background-color: #0077b6;
+}
+
+.sec a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+    background-color: #0077b6;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 1rem;
+    background-color: #0077b6;
+}
+
+ul li {
+    margin: 0.5rem 0;
+    background-color: #0077b6;
+}
+ul i{
+    background-color: #0077b6;
+}
+
+.footer img {
+    margin-bottom: 1rem;
+}
+
+.heropg {
+    position: relative; /* Establishes a positioning context */
+    display: inline-block;
+}
+
+.heropg img{
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    height: auto;
+    display: block; /* Removes any spacing around the image */
+}
+
+.img_text {
+    position: absolute; /* Allows the text to be positioned over the image */
+    top: 30%; /* Centers vertically */
+    left: 33%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Offsets the text so it's perfectly centered */
+    color: white; /* Text color */
+    font-size: 3rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    background-color: #0e72a8;  /*Optional: Adds a semi-transparent background */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.login
+{
+    width:340px;
+    height: 35px;
+    background-color:rgb(243, 178, 47);
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 1rem;
+    border-radius: 10px;
+    margin-bottom: none;
+}
+
+.login_page
+{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    background-color:#caf0f8;
+    width: 100%;
+    justify-content: center;
+}
+.login_box
+{
+    margin-top: 40px;
+    background-color: #caf0f8;
+    width: 30%;
+}
+#heading
+{
+    font-size: 40px;
+}
+.login_box p
+{
+    background-color: #caf0f8;
+    color: black;
+    text-align: center;
+}
+.login_box a
+{
+    background-color: #caf0f8;
+    color: blue;
+}
+.details
+{
+    margin-top: 40px;
+}
+.enter
+{
+    background-color: #caf0f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-size: 20px;
+}
+.enter label
+{
+    background-color: #caf0f8;
+}
+.enter input
+{
+    font-size: 20px;
+    background-color: white;
+    width: 300px;
+    margin: 5px;
+    border-radius: 3px;
+}
+#signin
+{
+    background-color: #caf0f8;
+}
+
+#signin input
+{
+    background-color: #0077b6;
+    color: #caf0f8;
+    height: 40px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 3px;
+    align-items: center;
+    align-content: center;
+}
+
+#signin input:hover {
+    background-color: #023e8a; 
+}
+
+.enter ::placeholder
+{
+    color: grey;
+    font-size: 20px;
+}
+
+
+.signup_box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.signup_box heading {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ent {
+    margin-bottom: 15px;
+}
+
+.ent label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    background-color: #f9f9f9;
+}
+
+.ent input[type="text"],
+.ent input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #caf0f8;
+}
+
+.ent input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0077b6;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.ent input[type="button"]:hover {
+    background-color: #023e8a;
+}
+
+
+.joinAs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #caf0f8;
+}
+
+.joinAs label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #caf0f8;
+}
+
+.joinAs input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.joinAs label:hover {
+    background-color: #0077b6;
+    color: #caf0f8;
+}
+
+.details p{
+    font-size: 25px;
+}
+
+.signup_box p{
+    background-color: #f9f9f9;
+}
+
+
+#sign_input {
+    background-color: #0077b6; /* Set initial blue color */
+    color: white;
+    height: 40px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#sign_input:hover {
+    background-color: #023e8a; /* Set darker shade on hover */
+}
+input[type="submit"] {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #023e8a;
+    transform: scale(1.05);
+}
+
+input[type="submit"] {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #023e8a;
+    transform: scale(1.05);
+}
+
+/* Container for all bed options */
+.bed_option {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap if there's not enough space */
+    gap: 1.5rem; /* Space between each bed option */
+    justify-content: center; /* Center-aligns the bed options */
+    padding: 1rem; /* Padding around the container */
+}
+
+/* Individual bed option styling */
+.bed {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 12px; /* More rounded corners for a modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for more emphasis */
+    padding: 1.5rem; /* Increased padding for a more spacious look */
+    width: 250px; /* Adjusted width for better fit */
+    text-align: center; /* Center-aligns the text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.bed:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.bed p {
+    margin: 0.5rem 0; /* Margin between paragraphs */
+    color: #333; /* Dark grey color for text */
+}
+
+/* Specific styling for bed type */
+.bed-type {
+    font-size: 1.3rem; /* Slightly larger font size */
+    font-weight: 600; /* Semi-bold text */
+    color: #0077b6; /* Primary color */
+    margin-bottom: 0.5rem; /* Space below bed type */
+}
+
+/* Styling for bed details */
+.bed-details {
+    font-size: 0.95rem; /* Slightly larger font size */
+    margin-bottom: 1rem; /* More space below details */
+}
+
+/* Styling for rooms available label */
+.bed-rooms {
+    font-size: 1rem; /* Slightly larger font size */
+    margin-bottom: 0.5rem; /* Space below label */
+}
+
+/* Styling for rooms available count */
+.bed-count {
+    font-size: 1.6rem; /* Larger font size for room count */
+    font-weight: 700; /* Bold text */
+    color: #0077b6; /* Primary color */
+    margin-bottom: 1rem; /* Space below count */
+}
+
+/* Styling for the book button */
+.book-button {
+    background-color: #0077b6; /* Primary color */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+.book-button:hover {
+    background-color: #005f8c; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.enter select {
+    width:300px; /* Make the select box take the full width of its container */
+    padding: 0.5rem; /* Add padding for better readability */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    margin-top: 0.5rem; /* Space above the select box */
+}
+.doctors {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    gap: 1.5rem; /* Space between each box */
+    padding: 1rem; /* Padding around the container */
+    justify-content: center; /* Center-aligns the boxes */
+}
+
+/* Individual doctor box styling */
+.doctors .box1 {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 1rem; /* Padding inside each box */
+    width: 250px; /* Fixed width for each box */
+    text-align: center; /* Center-aligns the text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for doctor boxes */
+.doctors .box1:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Styling for call link */
+.doctors.box1 a {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+}
+
+.doctors.box1 a:hover {
+    background-color: #005f73;
+}
+
+.doctors .box1 p {
+    background-color: #ffffff;
+    color: #023e8a;
+    font-size: 20px;
+}
+
+.doctors .box1 b {
+    background-color: #ffffff;
+    color: #023e8a;
+    font-size: 20px;
+}
+
+x{
+    background-color: #0e72a8;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+/* Add this to your style.css */
+#message {
+    margin: 20px 0;
+}
+
+#message .error {
+    color: red;
+}
+
+#message .success {
+    color: green;
+}
+.y{
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .grid-item {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+
+  .header {
+    font-weight: bold;
+    background-color: #00b4d8;
+    color: white;
+  }
+
+  .y{
+    text-align: center;
+  }
+
+  .book_med{
+    background-color: #0077b6;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+#message
+{
+    text-align: center;
+    margin: 10px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System </title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/ayush.png" type="ayush/png">
+</head>
+<body>
+    <nav>
+        <img src="/static/ayush.png" height="40px" class="logo" alt="Ayush logo"/>
+        <div class="logoname">Ministry Of Ayush</div>
+        <div class="n">
+            <a class="nv" href="http://127.0.0.1:5000//">Home</a>
+            <a class="nv" href="courses.html">Services</a>
+            <a class="nv" href="FAQ.html">FAQs</a>
+            {% if visited %}
+                <a class="nv" href="http://127.0.0.1:5000//logout">Log out</a>
+            {% else %}
+                <a class="nv" href="http://127.0.0.1:5000//login">Log in</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="homepg">
+        <img src="/static/hero image.webp" class="photo" alt="Home Page Image"/>
+        <div class="img_text">Building Trust and Hope for Patients </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Search here" class="searchbox">
+        </div>
+    </div>
+
+    <main>
+        <div class="service-container">
+            <div class="box">
+                <p>Schedule Appointment</p>
+                <img src="/static/opd.jpg" alt="OPD Image" />
+                <a href="http://127.0.0.1:5000//opd">Click here</a>
+            </div>
+
+            <div class="box">
+                <p>Book your bed</p>
+                <img src="/static/bed.jpg" alt="Bed Booking" />
+                <a href="http://127.0.0.1:5000//bed">Click here</a>
+            </div>
+
+            <div class="box">
+                <p>Pharmacy</p>
+                <img src="/static/pharmacy.jpg" alt="Pharmacy" />
+                <a href="http://127.0.0.1:5000//pharma">Click here</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="sec">
+            <img src="/static/ayush.png" height="30px" class="logo" alt="Ayush logo"/>
+            Ministry of Ayush
+        </div>
+        <div class="sec">
+            Helpful links
+            <a href="courses.html" class="flink">Services</a>
+            <a href="FAQs.html" class="flink">FAQs</a>
+            <a href="TnC.html" class="flink">Terms and Conditions</a>
+        </div>
+        <div class="sec">
+            Connect with us
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> **********</li>
+                <li><i class="fa-solid fa-envelope"></i> abc@gmail.com</li>
+                <li><i class="fa-brands fa-instagram"></i> ******</li>
+                <li><i class="fa-brands fa-facebook"></i> ********</li>
+                <li><i class="fa-brands fa-linkedin"></i> *********</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/static/login.js"></script>
+</body>
+</html>
